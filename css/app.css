@@ -1,0 +1,254 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;/*1REM = 10px */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem; /*Es igual a 16px que es el default en html*/
+    line-height: 2; /* es un interlineado*/
+    background-color: #000;
+}
+/*Globales*/
+h1, h2, h3{
+    font-family: "Playfair Display", serif;
+    margin: 0 0 5rem 0;
+    color: #FFF;
+}
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 3rem;
+}
+h3 {
+    font-size: 3 rem;
+    color: #bd0a0a;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+.btn{
+    background-color: #000;
+    display: block;
+    color: #ffefd5;
+    touch-action: inherit;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out; /* UN EFECTO DE ANIMACION */
+}
+.btn:hover{
+    background-color: #f01212;
+}
+
+/* UTILIDADES*/
+.text-center{
+    text-align: center;
+}
+
+/* Header y Navegacion*/
+.nombre-sitio {
+    margin-top: 5rem;
+    text-align: center;
+}
+.nombre-sitio span{
+    color: #f01212;
+}
+.contenedor-navegacion{
+    border-top: .1rem solid #e1e1e1;
+}
+.nav-principal{
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+
+}
+.hero{
+    background-image: url('../img/fondo_armas.jpg');
+    background-repeat: no-repeat; /* hace que no se repita la imagen*/
+    background-size: cover; /*hace que cubra todo el espacio disponible*/
+    background-position: center center; /* que parte de la imagen mostrar*/
+    height: 55rem;
+}
+
+/**Categorias**/
+.categorias{
+    padding-top: 5rem;
+}
+.categorias h2{
+    text-align: center;
+}
+.categoria a{
+    text-align: center;
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+}
+.categoria a:hover{
+    background-color: #bd0a0a;
+    color: #FFFFFF;
+    border-bottom-right-radius: 1rem;
+}
+.categoria img{
+    height: 25rem;
+}
+.listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/** Modulos, BEM, SMACSS estilos para escribir css**/ 
+/** Box model **/
+
+/** BLOQUE NOSOTROS*/
+.sobre-nosotros{
+    background-image: linear-gradient(to right, transparent 50%, #a70d0d 50%, #a70d0d
+    100%), url(../img/ghost.jpg);
+    background-position: left center;
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    background-size: 100%, 90rem; /* el 100 corresponde al color y el 120 a la imagen*/
+}
+.sobre-nosotros-grid{
+    display: flex;
+    justify-content: flex-end;
+}
+.texto-nosotros{
+    flex-basis: 50%;
+    padding-left: 10rem;
+    color: #fff;
+}
+
+/* OTRA FORMA DE HACERLO
+CON GRID
+.sobre-nosotros-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 8rem;
+}
+.texto-nosotros{
+    grid-column: 2 / 3;
+}
+*/
+
+/* LISTADO DE PRODUCTOS*/
+
+.contenido-principal{
+    padding-top:5rem;
+}
+.listado-productos{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem; /*SEPARACIONA A LOS LADOS*/
+    
+}
+.producto:nth-child(1){ /* SELECCIONAMOS AL PRIMER HIJO*/
+    grid-column-start: 1; /*EMPIEZA DEL 1 Y TERMINA EN EL 7*/
+    grid-column-end: 7;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+.producto:nth-child(1) img {
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;
+}
+.producto:nth-child(2){
+    grid-column-start: 1; /*ES LO MISMO DE ARRIBA PERO ESCRITO DE OTRA FORMA MAS CLARA*/
+    grid-column-end: 4;
+}
+.producto:nth-child(2) img,
+.producto:nth-child(3) img,
+.producto:nth-child(4) img, 
+.producto:nth-child(5) img, 
+.producto:nth-child(6) img {
+    height: 35rem;
+    width: 100%;
+    background-size: cover;
+}
+.producto:nth-child(3){
+    grid-column-start: 4; 
+    grid-column-end: 7;
+}
+.producto:nth-child(4){
+    grid-column-start: 1; 
+    grid-column-end: 3;
+}
+.producto:nth-child(5){
+    grid-column-start: 3; 
+    grid-column-end: 5;
+}
+.producto:nth-child(6){
+    grid-column-start: 5; 
+    grid-column-end: 7;
+}
+.producto{
+    background-color: #000;
+}
+.texto-producto{
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+}
+.texto-producto h3{
+    margin: 0;
+}
+.texto-producto p{
+    margin: 0 0 .5rem 0;
+}
+.texto-producto .precio{
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+/*FOOTER*/
+.site-footer{
+    border-top: 1px solid #e1e1e1;
+    margin-top: 5rem;
+    padding: 5rem;
+}
+.site-footer h3{
+    margin-bottom: .5rem;
+}
+.grid-footer{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 2rem;
+}
+.footer-menu a{
+    display: block;
+}
+.copyright{
+    margin-top: 5rem;
+    text-align: center;
+}
+
+/* NOSOTROS */
+
+.contenido-nosotros{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); /* esta linea lo hace responsive, para que no se altere el contenido al achicar la pantalla*/
+    column-gap: 4rem;
+}
+.informacion-nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+

@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #333;
+}
+
+.success-container {
+    border: 1px solid red; /* Cambia a blanco si prefieres: border: 1px solid white; */
+    text-align: center;
+    margin-top: 100px;
+}
+
+.success-icon {
+    font-size: 100px;
+    color: green;
+}
+
+.success-message {
+    font-size: 24px;
+    color: white;
+    margin-top: 20px;
+}

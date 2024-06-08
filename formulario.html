@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Pago</h1>
+        <form action="#" method="post">
+            <label for="nombre-completo">Nombre Completo:</label>
+            <input type="text" id="nombre-completo" name="nombre-completo" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="pais">País:</label>
+            <select id="pais" name="pais" required>
+                <option value="">Selecciona tu país</option>
+                <option value="argentina">Argentina</option>
+                <option value="mexico">México</option>
+                <option value="colombia">Colombia</option>
+                <option value="colombia">USA</option>
+                <option value="colombia">Cánada</option>
+                <option value="colombia">Japón</option>
+                <!-- Puedes agregar más opciones aquí -->
+            </select>
+
+            <label for="tarjeta">Número de Tarjeta:</label>
+            <input type="text" id="tarjeta" name="tarjeta" required>
+
+            <label for="vcc">CVV:</label>
+            <input type="text" id="vcc" name="vcc" required>
+
+            <label for="fecha-vencimiento">Fecha de Vencimiento:</label>
+            <input type="month" id="fecha-vencimiento" name="fecha-vencimiento" required>
+
+            
+            
+            <div class="enviar">
+                <a type="submit" href="verificacion.html">Enviar</a>
+            </div>
+            
+            <!--
+            <input type="submit" value="Enviar" > 
+        -->
+            
+        </form>
+    </div>
+</body>
+</html>
